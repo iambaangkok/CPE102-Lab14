@@ -17,3 +17,27 @@ int main(){
 	
 	return 0;
 }
+
+#include<algorithm>
+void shuffle(int &w,int &x,int &y,int &z){
+
+	int *arr[] = {&w,&x,&y,&z};
+	
+	int a = rand()%4;
+	int b = -1, c = -1, d = -1;
+	
+	do{
+		b = rand()%4;
+	}while(b == a);
+	do{
+		c = rand()%4;
+	}while(c == a || c == b);
+	do{
+		d = rand()%4;
+	}while(d == a || d == b || d == c);
+
+	swap(*(arr[a]),*(arr[b]));
+	swap(*(arr[c]),*(arr[d]));
+
+	return;
+}
