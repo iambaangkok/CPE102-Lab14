@@ -10,5 +10,5 @@ int main(){
 	sort(data+5,data+10);
 	cout << "\nAfter: ";
 	for(int i = 0; i<10; i++) cout << data[i] << " ";
-	return 0; a
+	return 0;
 }
